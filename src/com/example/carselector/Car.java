@@ -1,6 +1,12 @@
 package com.example.carselector;
 
-public class Car {
+// Importing Serializable class from java.io package to make the Car class serializable. Which 
+// means that the Car object can be converted into a sequence of bytes and stored in a file or
+// sent over the network.
+import java.io.Serializable;
+
+public class Car implements Serializable {
+    private static final long serialVersionUID = 1L; // Required for Serializable class
     private String make;
     private String model;
     private int year;
